@@ -47,6 +47,10 @@ int main()
 	delay(100);
 	led_off();
 	delay(100);
+	led_on(4);		//blinking white led
+	delay(100);
+	led_off();
+	delay(100);
 
 	led_on(led_color);	//turning on the white led initially for the infinite loop
 
