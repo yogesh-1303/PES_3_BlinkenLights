@@ -65,13 +65,13 @@ EXTRA CREDIT:
 
 00000428:   cmp     r3, #0	//compares data in r3 with 0
 
-0000042a:   bne.n   0x422 <delay+18>//if data in re is not equal to 0 go to the loop start
+0000042a:   bne.n   0x422 <delay+18>//if data in r3 is not equal to 0 go to the loop start
 
 20       	j = time_ms*2500;
 
 0000042c:   ldr     r3, [r7, #4]  // loads the data in the address (r7+4) into r3
 
-0000042e:   ldr     r2, [pc, #12]   ; (0x43c <delay+44>) //load data in address pc+32 in r2
+0000042e:   ldr     r2, [pc, #12]   ; (0x43c <delay+44>) //loads data in address pc+32 in r2
 
 00000430:   muls    r3, r2	//multiply data in r2 with data in r3
 
