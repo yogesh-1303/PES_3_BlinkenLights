@@ -65,7 +65,7 @@ EXTRA CREDIT:
 
 00000428:   cmp     r3, #0	//compares data in r3 with 0
 
-0000042a:   bne.n   0x422 <delay+18>//if data in r3 is not equal to 0 go to the loop start
+0000042a:   bne.n   0x422 <delay+18>//if data in r3 is not equal to 0 iterate the loop again
 
 20       	j = time_ms*2500;
 
