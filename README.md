@@ -45,13 +45,13 @@ EXTRA CREDIT:
 3.	Disassembly of the dealy() function:
 
 17       	volatile int j = time_ms*2500;
-00000418:   ldr     r3, [r7, #4]    //loads the data in the address (r7+4) into r3
+00000418:   ldr     r3, [r7, #4]    //loads the data in the address (r7+4) into r3; (time_ms)
 
-0000041a:   ldr     r2, [pc, #32]   ; (0x43c <delay+44>) //load data in address pc+32 in r2
+0000041a:   ldr     r2, [pc, #32]   ; (0x43c <delay+44>) //load data in address pc+32 into r2; (data = 2500)
 
-0000041c:   muls    r3, r2	//multiply data in r2 with data in r3 
+0000041c:   muls    r3, r2	//multiply data in r3 with data in r2; (time_ms*2500)
 
-0000041e:   str     r3, [r7, #12]	//store the data in address location r7+12 in r3
+0000041e:   str     r3, [r7, #12]	//store the data in address location r7+12 into r3; (j)
 
 19       	while(j--);
 
@@ -59,13 +59,13 @@ EXTRA CREDIT:
 
 00000422:   ldr     r3, [r7, #12]	// loads the data in the address location r7+12 into r3
 
-00000424:   subs    r2, r3, #1	//subtracts data in r3 by 1 and stores in r2
+00000424:   subs    r2, r3, #1	//subtracts data in r3 by 1 and stores in r2 ; (j--)
 
-00000426:   str     r2, [r7, #12]	//stores data in location r7+12 in r2
+00000426:   str     r2, [r7, #12]	//stores data in location r7+12 into r2
 
-00000428:   cmp     r3, #0	//compares data in r3 with 0
+00000428:   cmp     r3, #0	//compares data in r3 with 0; (sees if j!=0)
 
-0000042a:   bne.n   0x422 <delay+18>//if data in r3 is not equal to 0 iterate the loop again
+0000042a:   bne.n   0x422 <delay+18>//if data in r3 is not equal to 0, go back to instruction in address location 0x422 (iterate the loop again)
 
 20       	j = time_ms*2500;
 
