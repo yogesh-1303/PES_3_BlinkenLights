@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "MKL25Z4.h"
 
+//Following function contains the macros used in this file
 void def()
 {
 #define RED_LED_PIN 18U
@@ -10,6 +11,8 @@ void def()
 #define PORT_PCR_MUX_SHFT 8U
 }
 
+//following function intitialized led parameters
+//provides cock to Port B and D, sets MUX values for GPIO, sets direction of GPIO pins as output
 void led_init()
 {
 	SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;	//clock gating for port B
@@ -17,7 +20,7 @@ void led_init()
 
 
 		PORTB->PCR[RED_LED_PIN] &= ~PORT_PCR_MUX_MSK;			//clear all MUX bits
-		PORTB->PCR[RED_LED_PIN] |= (1UL<<PORT_PCR_MUX_SHFT) & (PORT_PCR_MUX_MSK);
+		PORTB->PCR[RED_LED_PIN] |= (1UL<<PORT_PCR_MUX_SHFT) & (PORT_PCR_MUX_MSK);	//set MUX=001; clear other bits
 
 		PORTB->PCR[GREEN_LED_PIN] &= ~PORT_PCR_MUX_MSK;			//clear all MUX bits
 		PORTB->PCR[GREEN_LED_PIN] |= (1UL<<PORT_PCR_MUX_SHFT) & (PORT_PCR_MUX_MSK);//set MUX=001; clear other bits
@@ -26,14 +29,14 @@ void led_init()
 		PORTD->PCR[BLUE_LED_PIN] |= (1UL<<PORT_PCR_MUX_SHFT) & (PORT_PCR_MUX_MSK);//set MUX=001; clear other bits
 
 
-		GPIOB->PDDR |= (1UL<<RED_LED_PIN);
-		GPIOB->PDDR |= (1UL<<GREEN_LED_PIN);
-		GPIOD->PDDR |= (1UL<<BLUE_LED_PIN);
+		GPIOB->PDDR |= (1UL<<RED_LED_PIN);			//set red_led_pin direction as output
+		GPIOB->PDDR |= (1UL<<GREEN_LED_PIN);		//set green_led_pin direction as output
+		GPIOD->PDDR |= (1UL<<BLUE_LED_PIN);			//set blue_led_pin direction as output
 
 }
 
-
-
+//Following function turns on the appropriate led.
+//takes an integer number as argument whose values are: 1 for red led, 2 for green led, 3 for blue led, and 4 for white led.
 void led_on(int num)
 {
 	if(num == 1)      //number for Red Led
@@ -63,7 +66,8 @@ void led_on(int num)
 	}
 }
 
-void led_off()								//turns off all the leds
+//Following function turns the led off
+void led_off()
 {
 	GPIOB->PSOR |= (1<<RED_LED_PIN) | (1<<GREEN_LED_PIN);
 	GPIOD->PSOR |= (1<<BLUE_LED_PIN);
