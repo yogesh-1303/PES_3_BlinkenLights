@@ -40,7 +40,7 @@ Tsi.h and led.h contain the prototypes of the functions defined in led.c and tsi
 
 
 EXTRA CREDIT:
-1.	Address of the main() function is  0000043c.
+1.	Address of the main() function is  0000043c in debug target and 0000042c in RUN target.
 2.	The size of delay function is 20 bytes.
 3.	Disassembly of the dealy() function:
 
