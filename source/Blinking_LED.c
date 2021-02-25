@@ -20,7 +20,6 @@ void delay(int time_ms)		//delays by time_ms milliseconds
 	volatile int j = time_ms*2500;
 
 	while(j--);
-	j = time_ms*2500;
 
 }
 

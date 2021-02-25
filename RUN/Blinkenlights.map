@@ -1157,36 +1157,36 @@ END GROUP
                 0x00000d24                _image_size = (_image_end - _image_start)
 OUTPUT(Blinkenlights.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x4f5c
+.debug_info     0x00000000     0x4f56
  .debug_info    0x00000000      0x69d ./startup/startup_mkl25z4.o
- .debug_info    0x0000069d      0x487 ./source/Blinking_LED.o
- .debug_info    0x00000b24      0x52f ./source/led.o
- .debug_info    0x00001053       0x4f ./source/mtb.o
- .debug_info    0x000010a2       0x38 ./source/semihost_hardfault.o
- .debug_info    0x000010da      0x462 ./source/tsi.o
- .debug_info    0x0000153c     0x1b35 ./drivers/fsl_lpsci.o
- .debug_info    0x00003071     0x1aac ./drivers/fsl_uart.o
- .debug_info    0x00004b1d      0x43f ./CMSIS/system_MKL25Z4.o
+ .debug_info    0x0000069d      0x481 ./source/Blinking_LED.o
+ .debug_info    0x00000b1e      0x52f ./source/led.o
+ .debug_info    0x0000104d       0x4f ./source/mtb.o
+ .debug_info    0x0000109c       0x38 ./source/semihost_hardfault.o
+ .debug_info    0x000010d4      0x462 ./source/tsi.o
+ .debug_info    0x00001536     0x1b35 ./drivers/fsl_lpsci.o
+ .debug_info    0x0000306b     0x1aac ./drivers/fsl_uart.o
+ .debug_info    0x00004b17      0x43f ./CMSIS/system_MKL25Z4.o
 
-.debug_abbrev   0x00000000     0x113a
+.debug_abbrev   0x00000000     0x1137
  .debug_abbrev  0x00000000      0x155 ./startup/startup_mkl25z4.o
- .debug_abbrev  0x00000155      0x201 ./source/Blinking_LED.o
- .debug_abbrev  0x00000356      0x17f ./source/led.o
- .debug_abbrev  0x000004d5       0x43 ./source/mtb.o
- .debug_abbrev  0x00000518       0x2e ./source/semihost_hardfault.o
- .debug_abbrev  0x00000546      0x156 ./source/tsi.o
- .debug_abbrev  0x0000069c      0x4a7 ./drivers/fsl_lpsci.o
- .debug_abbrev  0x00000b43      0x4a1 ./drivers/fsl_uart.o
- .debug_abbrev  0x00000fe4      0x156 ./CMSIS/system_MKL25Z4.o
+ .debug_abbrev  0x00000155      0x1fe ./source/Blinking_LED.o
+ .debug_abbrev  0x00000353      0x17f ./source/led.o
+ .debug_abbrev  0x000004d2       0x43 ./source/mtb.o
+ .debug_abbrev  0x00000515       0x2e ./source/semihost_hardfault.o
+ .debug_abbrev  0x00000543      0x156 ./source/tsi.o
+ .debug_abbrev  0x00000699      0x4a7 ./drivers/fsl_lpsci.o
+ .debug_abbrev  0x00000b40      0x4a1 ./drivers/fsl_uart.o
+ .debug_abbrev  0x00000fe1      0x156 ./CMSIS/system_MKL25Z4.o
 
-.debug_loc      0x00000000     0x29b9
+.debug_loc      0x00000000     0x2994
  .debug_loc     0x00000000      0x234 ./startup/startup_mkl25z4.o
- .debug_loc     0x00000234      0x10f ./source/Blinking_LED.o
- .debug_loc     0x00000343       0x4f ./source/led.o
- .debug_loc     0x00000392       0x37 ./source/tsi.o
- .debug_loc     0x000003c9     0x1302 ./drivers/fsl_lpsci.o
- .debug_loc     0x000016cb     0x1235 ./drivers/fsl_uart.o
- .debug_loc     0x00002900       0xb9 ./CMSIS/system_MKL25Z4.o
+ .debug_loc     0x00000234       0xea ./source/Blinking_LED.o
+ .debug_loc     0x0000031e       0x4f ./source/led.o
+ .debug_loc     0x0000036d       0x37 ./source/tsi.o
+ .debug_loc     0x000003a4     0x1302 ./drivers/fsl_lpsci.o
+ .debug_loc     0x000016a6     0x1235 ./drivers/fsl_uart.o
+ .debug_loc     0x000028db       0xb9 ./CMSIS/system_MKL25Z4.o
 
 .debug_aranges  0x00000000      0x428
  .debug_aranges
@@ -1218,16 +1218,16 @@ OUTPUT(Blinkenlights.axf elf32-littlearm)
  .debug_ranges  0x00000320      0x148 ./drivers/fsl_uart.o
  .debug_ranges  0x00000468       0x18 ./CMSIS/system_MKL25Z4.o
 
-.debug_line     0x00000000     0x30f3
+.debug_line     0x00000000     0x30eb
  .debug_line    0x00000000      0x3cb ./startup/startup_mkl25z4.o
- .debug_line    0x000003cb      0x3d3 ./source/Blinking_LED.o
- .debug_line    0x0000079e      0x303 ./source/led.o
- .debug_line    0x00000aa1       0x30 ./source/mtb.o
- .debug_line    0x00000ad1       0x5a ./source/semihost_hardfault.o
- .debug_line    0x00000b2b      0x240 ./source/tsi.o
- .debug_line    0x00000d6b     0x1051 ./drivers/fsl_lpsci.o
- .debug_line    0x00001dbc     0x1026 ./drivers/fsl_uart.o
- .debug_line    0x00002de2      0x311 ./CMSIS/system_MKL25Z4.o
+ .debug_line    0x000003cb      0x3cb ./source/Blinking_LED.o
+ .debug_line    0x00000796      0x303 ./source/led.o
+ .debug_line    0x00000a99       0x30 ./source/mtb.o
+ .debug_line    0x00000ac9       0x5a ./source/semihost_hardfault.o
+ .debug_line    0x00000b23      0x240 ./source/tsi.o
+ .debug_line    0x00000d63     0x1051 ./drivers/fsl_lpsci.o
+ .debug_line    0x00001db4     0x1026 ./drivers/fsl_uart.o
+ .debug_line    0x00002dda      0x311 ./CMSIS/system_MKL25Z4.o
 
 .debug_str      0x00000000     0x24ee
  .debug_str     0x00000000      0x4ce ./startup/startup_mkl25z4.o
