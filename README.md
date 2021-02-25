@@ -47,7 +47,7 @@ EXTRA CREDIT:
 20       	volatile int j = time_ms*2500;
 00000418:   ldr     r3, [r7, #4]    //loads the data in the address (r7+4) into r3; (time_ms)
 
-0000041a:   ldr     r2, [pc, #32]   ; (0x43c <delay+44>) //load data in address pc+32 into r2; (data = 2500)
+0000041a:   ldr     r2, [pc, #28]   ; (0x438 <delay+40>) //load data in address pc+28 into r2; (data = 2500)
 
 0000041c:   muls    r3, r2	//multiply data in r3 with data in r2; (time_ms*2500)
 
